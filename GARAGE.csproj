@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ED75512C-D2B9-437A-ABE8-41E1DE94C005}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GARAGE</RootNamespace>
+    <AssemblyName>GARAGE</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon32r.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=5.12.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\FontAwesome.Sharp.5.12.1\lib\net45\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.18.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data.EntityFramework, Version=8.0.18.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySQL.Data.EntityFrameworkCore, Version=8.0.18.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySQL.Data.EntityFrameworkCore.Design, Version=8.0.18.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdministrationScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdministrationScreen.Designer.cs">
+      <DependentUpon>AdministrationScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AuthScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuthScreen.Designer.cs">
+      <DependentUpon>AuthScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Auth_alert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Auth_alert.Designer.cs">
+      <DependentUpon>Auth_alert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CarEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CarEdit.Designer.cs">
+      <DependentUpon>CarEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CarScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CarScreen.Designer.cs">
+      <DependentUpon>CarScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientEdit.Designer.cs">
+      <DependentUpon>ClientEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientsScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientsScreen.Designer.cs">
+      <DependentUpon>ClientsScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Config.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config.Designer.cs">
+      <DependentUpon>Config.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomImageButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomImageButton.Designer.cs" />
+    <Compile Include="CustomImageButton1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomImageButton.resx</DependentUpon>
+    </Compile>
+    <Compile Include="EditClients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditClients.Designer.cs">
+      <DependentUpon>EditClients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GarageDataSet.cs">
+      <DependentUpon>GarageDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GarageDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GarageDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PartsEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PartsEdit.Designer.cs">
+      <DependentUpon>PartsEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PartsScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PartsScreen.Designer.cs">
+      <DependentUpon>PartsScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainScreen.Designer.cs">
+      <DependentUpon>MainScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterEdit.Designer.cs">
+      <DependentUpon>MasterEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MastersScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MastersScreen.Designer.cs">
+      <DependentUpon>MastersScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderEdit.Designer.cs">
+      <DependentUpon>OrderEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderScreen.Designer.cs">
+      <DependentUpon>OrderScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personal_card.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personal_card.Designer.cs">
+      <DependentUpon>Personal_card.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServiceEdit.Designer.cs">
+      <DependentUpon>ServiceEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServiceScreen.Designer.cs">
+      <DependentUpon>ServiceScreen.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AdministrationScreen.resx">
+      <DependentUpon>AdministrationScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AuthScreen.resx">
+      <DependentUpon>AuthScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Auth_alert.resx">
+      <DependentUpon>Auth_alert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CarEdit.resx">
+      <DependentUpon>CarEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CarScreen.resx">
+      <DependentUpon>CarScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientEdit.resx">
+      <DependentUpon>ClientEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientsScreen.resx">
+      <DependentUpon>ClientsScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config.resx">
+      <DependentUpon>Config.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomImageButton.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CustomImageButton1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditClients.resx">
+      <DependentUpon>EditClients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PartsEdit.resx">
+      <DependentUpon>PartsEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PartsScreen.resx">
+      <DependentUpon>PartsScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainScreen.resx">
+      <DependentUpon>MainScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterEdit.resx">
+      <DependentUpon>MasterEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MastersScreen.resx">
+      <DependentUpon>MastersScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderEdit.resx">
+      <DependentUpon>OrderEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderScreen.resx">
+      <DependentUpon>OrderScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personal_card.resx">
+      <DependentUpon>Personal_card.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ServiceEdit.resx">
+      <DependentUpon>ServiceEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServiceScreen.resx">
+      <DependentUpon>ServiceScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="GarageDataSet.xsc">
+      <DependentUpon>GarageDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GarageDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GarageDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="GarageDataSet.xss">
+      <DependentUpon>GarageDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="MyImageButton\CustomImageButton.csproj">
+      <Project>{E1B775A4-627C-4BED-B8AE-B3A253489397}</Project>
+      <Name>CustomImageButton</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SunBlue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sun_40px_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\partly_cloudy_night_40px_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sun_40px_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\partly_cloudy_night_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout_rounded_left_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout_rounded_left_50px_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin_settings_male_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin_settings_male_50px_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alarms_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alarms_50px_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resume_website_55px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resume_website_55px_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_user_group_man_man_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove_administrator_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove_user_male_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_user_male_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_administrator_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icon32r.ico" />
+    <Content Include="noun_Car_Service_174100.ico" />
+    <None Include="Resources\Icon2r.png" />
+    <None Include="Resources\design_40px.png" />
+    <None Include="Resources\delete_sign_40px.png" />
+    <None Include="Resources\plus_math_40px.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
